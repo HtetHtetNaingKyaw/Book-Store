@@ -6,16 +6,18 @@ import Home from "./pages/Home";
 import HomeLayout from "./layout/HomeLayout";
 import CreateBook from "./pages/CreateBook";
 import { Toaster } from "react-hot-toast";
+import BookDetail from "./pages/BookDetail";
 
 const App = () => {
   return (
     <>
-    <Toaster/>
+      <Toaster />
       <Routes>
         <Route index element={<Landing />} />
         <Route path="/home" element={<HomeLayout />}>
           <Route index element={<Home />} />
           <Route path="create-Book" element={<CreateBook />} />
+          <Route path="book-detail/:id" element={<BookDetail />} />
         </Route>
       </Routes>
     </>

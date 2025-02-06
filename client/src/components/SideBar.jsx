@@ -12,11 +12,11 @@ const SideBar = () => {
   ];
   return (
     <div>
-      <div className="flex items-center border-b-2 border-base-300 p-3 gap-3">
+      <div className="flex items-center border-b-2 border-base-300 p-3 gap-3 ">
         <img
           src="https://cdn-icons-png.flaticon.com/128/5832/5832416.png"
           alt=""
-          className=" w-[80px]" onClick={() => {
+          className=" w-[60px]" onClick={() => {
             nav("/")
           }
           }
@@ -24,7 +24,7 @@ const SideBar = () => {
         <div className="text-4xl select-none">Book Store</div>
       </div>
 
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-2 mt-5">
         {pages.map((items) => {
           return (
             <div

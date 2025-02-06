@@ -36,7 +36,7 @@ const BookForm = () => {
         <label htmlFor="">Book Name</label>
         <input
           type="text"
-          className="input max-w-none input-secondary w-full"
+          className="input max-w-none input-primary w-full"
           {...register("name")}
         />
         {errors.name && (
@@ -47,7 +47,7 @@ const BookForm = () => {
         <label htmlFor="">Author</label>
         <input
           type="text"
-          className="input max-w-none input-secondary w-full"
+          className="input max-w-none input-primary w-full"
           {...register("author")}
         />
         {errors.author && (
@@ -58,7 +58,7 @@ const BookForm = () => {
         <label htmlFor="">Release Year</label>
         <input
           type="text"
-          className="input max-w-none input-secondary w-full"
+          className="input max-w-none input-primary w-full"
           {...register("release")}
         />
         {errors.release && (
@@ -69,7 +69,7 @@ const BookForm = () => {
         <label htmlFor="">Price</label>
         <input
           type="text"
-          className="input max-w-none input-secondary w-full"
+          className="input max-w-none input-primary w-full"
           {...register("price")}
         />
         {errors.price && (
@@ -80,7 +80,7 @@ const BookForm = () => {
         <label htmlFor="">Image Url</label>
         <input
           type="text"
-          className="input max-w-none input-secondary w-full"
+          className="input max-w-none input-primary w-full"
           {...register("img")}
         />
         {errors.img && (
