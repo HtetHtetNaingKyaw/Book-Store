@@ -11,8 +11,8 @@ const SideBar = () => {
     { name: "CreateBook", path: "/home/create-book" },
   ];
   return (
-    <div>
-      <div className="flex items-center border-b-2 border-base-300 p-3 gap-3 ">
+    <div className="bg-base-200 h-screen md:w-full w-1/2">
+      <div className="md:flex items-center border-b-2 hidden border-b-primary border-base-300 p-3 gap-3 ">
         <img
           src="https://cdn-icons-png.flaticon.com/128/5832/5832416.png"
           alt=""

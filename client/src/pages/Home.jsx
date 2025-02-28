@@ -1,7 +1,7 @@
 import React from "react";
 import { useGetBooks } from "../react-query/bookUpload";
 import Loading from "../components/Loading";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const Home = () => {
   const { data: books, isLoading } = useGetBooks();
@@ -13,10 +13,10 @@ const Home = () => {
   }
   return (
     <div className="grid grid-cols-12 gap-3 p-2">
-      {books?.map((item) => {
+      { books ? books?.map((item) => {
         return (
           <div
-            className="card max-w-none col-span-4 overflow-hidden bg-base-300"
+            className="card max-w-none col-span-12 overflow-hidden bg-base-300"
             key={item.id}
           >
             <img
@@ -42,7 +42,15 @@ const Home = () => {
             </div>
           </div>
         );
-      })}
+      }): <div className=" col-span-12 flex justify-center flex-col items-center h-screen">
+        <div className=" text-2xl">No Data Available</div>
+        <div className="btn btn-link" onClick={() => {
+          nav("/home/create-book");
+        }
+        }>Upload Book</div>
+      </div>
+      
+      }
     </div>
   );
 };
